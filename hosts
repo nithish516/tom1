@@ -1,0 +1,17 @@
+[local]
+localhost
+
+[datacenter:children]
+webserver
+
+[datacenter:vars]
+ansible_ssh_user=centos
+ansible_ssh_private_key_file=/home/nithish/Downloads/centos.pem
+ansible_ssh_port=22
+
+[webserver]
+
+
+
+
+
