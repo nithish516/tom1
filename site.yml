@@ -1,15 +1,15 @@
 ---
 - name: Provision an EC2 Instance
   hosts: localhost
-  gather_facts: True
   tags: provisioning
   
   roles:
     - ec2
 - name: install tomcat
   hosts: ec2hosts
-  become: yes
   gather_facts: True
+  user: centos
+  become: yes
   become_method: sudo
 
   roles:
